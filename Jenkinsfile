@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  triggers {
+      pollSCM('0 0 * * 0')
+  }
   stages {
     stage('Echo Branch') {
       agent any
