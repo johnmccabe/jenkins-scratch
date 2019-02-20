@@ -8,11 +8,17 @@ pipeline {
       }
     }
     stage('Master') {
+      when {
+           branch 'master'
+     }
       steps {
         sh 'echo "SHOULD ONLY RUN ON MASTER - ${GIT_BRANCH}"'
       }
     }
     stage('Develop') {
+      when {
+           branch 'develop'
+     }
       steps {
         sh 'echo "SHOULD ONLY RUN ON DEVELOP - ${GIT_BRANCH}"'
       }
