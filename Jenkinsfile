@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  properties([pipelineTriggers([cron('H 23 * * *')])])
+  options([pipelineTriggers([cron('H 23 * * *')])])
   stages {
     stage('Echo Branch') {
       agent any
