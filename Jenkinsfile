@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  options([pipelineTriggers([cron('H 23 * * *')])])
+  options { disableConcurrentBuilds() }
   stages {
     stage('Echo Branch') {
       agent any
