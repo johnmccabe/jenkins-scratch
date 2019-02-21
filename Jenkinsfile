@@ -5,7 +5,7 @@ pipeline {
     overrideIndexTriggers(false)
   }
   triggers {
-    pollSCM('H(0-4) H * * *')
+    pollSCM('* H/10 * * *')
   }
   stages {
     stage('Echo Branch') {
