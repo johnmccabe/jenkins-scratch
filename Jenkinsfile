@@ -1,6 +1,9 @@
 pipeline {
   agent any
-  options { disableConcurrentBuilds() }
+  options { 
+    disableConcurrentBuilds()
+    pollSCM('H(0-4) H * * *')
+  }
   stages {
     stage('Echo Branch') {
       agent any
