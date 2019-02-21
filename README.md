@@ -2,4 +2,4 @@ Jenkins Scratch
 
 Repo for testing build pipeline config
 
-Change when pipeline is using PollSCM trigger... 1, 2
+Change when pipeline is using PollSCM trigger... 1, 2, 3
