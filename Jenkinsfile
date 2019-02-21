@@ -10,7 +10,17 @@ pipeline {
   parameters {
     string(name: 'BD_PROJECT', defaultValue: 'myproject', description: 'Black Duck Project Name')
   }
+  environment {
+    BD_ARTIFACT_DIR = "\${WORKSPACE}/mydir"
+  }
   stages {
+    stage('Echo DIR') {
+      agent any
+      steps {
+        sh "echo 'BD_ARTIFACT_DIR - ${BD_ARTIFACT_DIR}'"
+        sh 'sleep 15'
+      }
+    }
     stage('Echo Branch') {
       agent any
       steps {
