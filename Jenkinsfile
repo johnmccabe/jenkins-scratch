@@ -17,7 +17,7 @@ pipeline {
     stage('Echo DIR') {
       agent any
       steps {
-        sh "echo 'BD_ARTIFACT_DIR - ${BD_ARTIFACT_DIR}'"
+        sh "echo \"BD_ARTIFACT_DIR - ${BD_ARTIFACT_DIR}\""
         sh 'sleep 15'
       }
     }
