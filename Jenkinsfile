@@ -2,6 +2,8 @@ pipeline {
   agent any
   options { 
     disableConcurrentBuilds()
+  }
+  triggers {
     pollSCM('H(0-4) H * * *')
   }
   stages {
