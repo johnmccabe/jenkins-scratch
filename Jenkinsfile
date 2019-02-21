@@ -21,7 +21,7 @@ pipeline {
     stage('Echo Black Duck Project') {
       agent any
       steps {
-        sh 'echo "PROJECT NAME - ${params.BD_PROJECT}"'
+        sh "echo 'PROJECT NAME - ${params.BD_PROJECT}'"
       }
     }
     stage('Master') {
