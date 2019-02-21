@@ -2,6 +2,7 @@ pipeline {
   agent any
   options { 
     disableConcurrentBuilds()
+    overrideIndexTriggers(true)
   }
   triggers {
     pollSCM('H(0-4) H * * *')
@@ -16,16 +17,16 @@ pipeline {
     }
     stage('Master') {
       when {
-           branch 'master'
-     }
+        branch 'master'
+      }
       steps {
         sh 'echo "SHOULD ONLY RUN ON MASTER - ${GIT_BRANCH}"'
       }
     }
     stage('Develop') {
       when {
-           branch 'develop'
-     }
+        branch 'develop'
+      }
       steps {
         sh 'echo "SHOULD ONLY RUN ON DEVELOP - ${GIT_BRANCH}"'
       }
