@@ -2,7 +2,7 @@ pipeline {
   agent any
   options { 
     disableConcurrentBuilds()
-    overrideIndexTriggers(true)
+    overrideIndexTriggers(false)
   }
   triggers {
     pollSCM('H(0-4) H * * *')
