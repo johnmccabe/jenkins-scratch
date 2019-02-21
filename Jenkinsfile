@@ -6,7 +6,7 @@ pipeline {
       agent any
       steps {
         sh 'echo "BUILDING BRANCH - ${GIT_BRANCH}"'
-        sh 'sleep 30'
+        sh 'sleep 15'
       }
     }
     stage('Master') {
